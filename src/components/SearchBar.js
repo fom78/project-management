@@ -17,9 +17,9 @@ export default function SearchBar () {
     dispatch(setSearchText(text))
   }
 
-  const handleEnterEvent = event => {
+  const handleEnterEvent = (event, values) => {
     if (event.key === 'Enter') {
-      handleSubmit(searchText)
+      handleSubmit(values)
     }
   }
 
@@ -27,6 +27,7 @@ export default function SearchBar () {
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => handleSubmit(values)}
+      onKeyDown={(event, values) => handleEnterEvent(event, values)}
     >
       {({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
@@ -38,7 +39,7 @@ export default function SearchBar () {
               name='searchText'
               placeholder={searchText}
               id='searchText'
-              onKeyDown={handleEnterEvent}
+              // onKeyDown={(values) => handleEnter(values)}
             />
             <Spacer />
             <IconButton
