@@ -1,11 +1,12 @@
+import Navbar from 'components/Navbar'
 import RoutesWeb from 'routes'
 import './App.css'
 
 function App () {
   return (
     <>
-    <h1> Management</h1>
-    <RoutesWeb />
+      <Navbar />
+      <RoutesWeb />
     </>
   )
 }
