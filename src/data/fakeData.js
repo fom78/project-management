@@ -36,7 +36,7 @@ export const projects = [
   {
     id: 1,
     projectName: 'Landing Page',
-    creationDate: '09/09/09 10:30 am',
+    creationDate: '09/09/09 10:30',
     description: 'description',
     assignedTo: 'Ignacio Truffan',
     projectManager: 'Walt Cosani',
@@ -45,7 +45,7 @@ export const projects = [
   {
     id: 2,
     projectName: 'E-Commerce Shop',
-    creationDate: '09/09/09',
+    creationDate: '10/09/22 05:30',
     description: 'description',
     assignedTo: 'Ignacio Truffa',
     projectManager: 'Walt Cosani',
@@ -54,7 +54,7 @@ export const projects = [
   {
     id: 3,
     projectName: 'CRM Linkroom',
-    creationDate: '09/09/09',
+    creationDate: '07/18/21 17:00',
     description: 'description',
     assignedTo: 'Ignacio Truffa',
     projectManager: 'Walt Cosani',
@@ -63,7 +63,7 @@ export const projects = [
   {
     id: 4,
     projectName: 'Back Office google',
-    creationDate: '24/05/22',
+    creationDate: '05/24/22 21:00',
     description: 'description',
     assignedTo: 'Castro Miriam',
     projectManager: 'Perez Juan',
@@ -72,7 +72,7 @@ export const projects = [
   {
     id: 5,
     projectName: 'Challenge Esto Es',
-    creationDate: '24/05/22',
+    creationDate: '05/24/22 21:00',
     description: 'description',
     assignedTo: 'Perez Juan',
     projectManager: 'Castro Miriam',

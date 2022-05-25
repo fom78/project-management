@@ -93,7 +93,8 @@ const ProjectForm = ({
       title: text,
       status: 'success',
       duration: 5000,
-      isClosable: true
+      isClosable: true,
+      position: 'top'
     })
 
   const handleAddProject = values => {
