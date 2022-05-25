@@ -76,8 +76,7 @@ const ProjectForm = ({
 }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const params = useParams()
-  console.log('para ', params, id)
+
   const toast = useToast()
 
   const initialFormValues = {

@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import RoutesWeb from 'routes'
 import { setProjects } from 'store/slices/projectsSlice'
-import './App.css'
 
 function App () {
   const dispatch = useDispatch()
