@@ -42,7 +42,7 @@ export default function SearchBar () {
             />
             <Spacer />
             <IconButton
-              colorScheme='blue'
+              colorScheme='red'
               type='submit'
               aria-label='Search project'
               icon={<FaSearch />}
