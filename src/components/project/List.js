@@ -1,9 +1,10 @@
 
 import { Box, Container } from '@chakra-ui/react'
 import { useSelector } from 'react-redux'
-import ProjectCard from './ProjectCard'
+import Card from './Card'
+import Table from './Table'
 
-export default function ProjectsList () {
+export default function List () {
   const projects = useSelector(state => state.projects.projects)
   const searchText = useSelector(state => state.search.searchText)
   const filterProjects = projects.filter(project =>
@@ -15,10 +16,10 @@ export default function ProjectsList () {
       <Container maxW='container.xl' px={{ base: 0, md: 4 }}>
         <Box display={{ md: 'none', base: 'block' }}>
           {filterProjects.map(project => (
-            <ProjectCard {...project} key={project.id} />
+            <Card {...project} key={project.id} />
           ))}
         </Box>
-        {/* <ProjectsTable projects={filterProjects} /> */}
+        <Table projects={filterProjects} />
       </Container>
     </div>
   )

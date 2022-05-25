@@ -1,4 +1,4 @@
-import { Container, IconButton, Input } from '@chakra-ui/react'
+import { Container, IconButton, Input, Spacer } from '@chakra-ui/react'
 import { Field, Formik } from 'formik'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSearchText } from 'store/slices/searchSlice'
@@ -19,7 +19,7 @@ export default function SearchBar () {
 
   const handleEnterEvent = event => {
     if (event.key === 'Enter') {
-      handleSubmit()
+      handleSubmit(searchText)
     }
   }
 
@@ -30,7 +30,7 @@ export default function SearchBar () {
     >
       {({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
-          <Container display='flex' mb={{ base: 4, md: 8 }}>
+          <Container display='flex' gap='4px' mb={{ base: 4, md: 8 }}>
             <Field
               as={Input}
               bgColor='white'
@@ -40,6 +40,7 @@ export default function SearchBar () {
               id='searchText'
               onKeyDown={handleEnterEvent}
             />
+            <Spacer />
             <IconButton
               colorScheme='blue'
               type='submit'

@@ -29,7 +29,8 @@ export const SelectField = ({ name, type, placeholder, isInvalid, error, values 
         type={type}
         // variant="filled"
       >
-        <option key={-1} value='' disabled>Seleccione un valor</option>
+        {name !== 'status' && <option key={-1} value='' disabled>Select a person</option>}
+
         {values?.map((value, index) => <option key={index} value={value.name}>{value.name}</option>)}
       </Field>
       <FormErrorMessage>{error}</FormErrorMessage>

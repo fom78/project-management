@@ -3,7 +3,7 @@ import Btn from 'components/Btn'
 import Header from 'components/Header'
 import { Link } from 'react-router-dom'
 import { FaPlus } from 'react-icons/fa'
-import ProjectsList from 'components/ProjectsList'
+import List from 'components/project/List'
 import SearchBar from 'components/SearchBar'
 
 export default function Home () {
@@ -19,7 +19,7 @@ export default function Home () {
 
       <Box bgColor='gray.100' minH='100vh' py={{ base: 4, md: 8 }}>
         <SearchBar />
-        <ProjectsList />
+        <List />
       </Box>
     </Box>
   )

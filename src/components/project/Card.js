@@ -3,7 +3,7 @@ import profile from 'assets/images/avatar02.png'
 import ActionsMenu from './ActionsMenu'
 // import OptionsMenu from './OptionsMenu'
 
-export default function ProjectCard ({ id, projectName, assignedTo, creationDate }) {
+export default function Card ({ id, projectName, assignedTo, creationDate }) {
   const customDate = new Date(creationDate)
   return (
     <>

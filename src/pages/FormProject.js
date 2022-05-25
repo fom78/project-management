@@ -1,4 +1,4 @@
-import { Box, Container, useToast, VStack } from '@chakra-ui/react'
+import { Box, Button, Container, useToast, VStack } from '@chakra-ui/react'
 import Btn from 'components/Btn'
 import Header from 'components/Header'
 import { InputField, SelectField } from 'components/utils/FormField'
@@ -7,8 +7,9 @@ import { validationSchema } from 'data/validationSchema'
 import { Formik } from 'formik'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { addProject, editProject } from 'store/slices/projectsSlice'
+import { FaArrowLeft } from 'react-icons/fa'
 
 const FormFields = ({ edit = false, errors, touched }) => {
   return (
@@ -25,21 +26,21 @@ const FormFields = ({ edit = false, errors, touched }) => {
       <InputField
         name='projectName'
         type='text'
-        placeholder='Nombre de Proyecto'
+        placeholder='Project Name'
         isInvalid={!!errors.projectName && touched.projectName}
         error={errors.projectName}
       />
       <InputField
         name='description'
         type='text'
-        placeholder='Descripcion del Proyecto'
+        placeholder='Description'
         isInvalid={!!errors.description && touched.description}
         error={errors.description}
       />
       <SelectField
         name='projectManager'
         type='text'
-        placeholder='Select a person'
+        placeholder='Project Manager'
         isInvalid={!!errors.projectManager && touched.projectManager}
         error={errors.projectManager}
         values={users}
@@ -47,7 +48,7 @@ const FormFields = ({ edit = false, errors, touched }) => {
       <SelectField
         name='assignedTo'
         type='text'
-        placeholder='Select a person'
+        placeholder='Assigned To'
         isInvalid={!!errors.assignedTo && touched.assignedTo}
         error={errors.assignedTo}
         values={users}
@@ -164,9 +165,12 @@ export default function FormProject () {
 
   return (
     <Box>
-      <Header text='Add project'>
-        {/* <HeaderBackButton /> */}
-        volver
+      <Header text={id ? 'Edit project' : 'Add project'} back>
+        <Link to='/'>
+          <Button pl={0} leftIcon={<FaArrowLeft />} variant='ghost'>
+            Back
+          </Button>
+        </Link>
       </Header>
       <Box bgColor='gray.100'>
         <Container
