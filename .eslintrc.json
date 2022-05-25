@@ -6,7 +6,7 @@
         "jest": true
     },
     "extends": [
-        "standard"
+        "./node_modules/standard/eslintrc.json"
     ],
     "parserOptions": {
         "ecmaVersion": "latest"
