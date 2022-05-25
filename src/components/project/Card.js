@@ -1,7 +1,6 @@
 import { Avatar, Box, HStack, Text } from '@chakra-ui/react'
 import profile from 'assets/images/avatar02.png'
 import ActionsMenu from './ActionsMenu'
-// import OptionsMenu from './OptionsMenu'
 
 export default function Card ({ id, projectName, assignedTo, creationDate }) {
   const customDate = new Date(creationDate)

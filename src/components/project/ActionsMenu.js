@@ -49,7 +49,7 @@ export default function ActionsMenu ({ id }) {
                 Delete Project
               </AlertDialogHeader>
               <AlertDialogBody>
-                Are you sure? You can't undo this action afterwards.
+                Are you sure?
               </AlertDialogBody>
               <AlertDialogFooter>
                 <Button ref={cancelRef} onClick={onCloseDelete}>

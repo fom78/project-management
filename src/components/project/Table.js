@@ -2,7 +2,7 @@ import { Box, Table as TableChakra, Tbody, Th, Thead, Tr } from '@chakra-ui/reac
 import React from 'react'
 import ProjectRow from './Row'
 
-const thTitles = [
+const tableHeads = [
   'Project info',
   'Project Manager',
   'Assigned to',
@@ -16,17 +16,15 @@ export default function Table ({ projects }) {
       <TableChakra>
         <Thead bgColor='gray.50' py={4}>
           <Tr>
-            {thTitles.map((title, index) => (
-              // eslint-disable-next-line
-              <Th key={index} textTransform='capitalize' fontSize='md' >
-                {title}
+            {tableHeads.map((head, index) => (
+              <Th key={index} textTransform='capitalize' fontSize='md'>
+                {head}
               </Th>
             ))}
           </Tr>
         </Thead>
         <Tbody>
           {projects.map((project) => (
-            // eslint-disable-next-line
             <ProjectRow {...project} key={project.id} />
           ))}
         </Tbody>
