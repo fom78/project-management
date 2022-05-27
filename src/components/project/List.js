@@ -19,6 +19,7 @@ export default function List () {
             <Card {...project} key={project.id} />
           ))}
         </Box>
+        {/* <Table projects={filterProjects} /> */}
         <Table projects={filterProjects} />
       </Container>
     </div>

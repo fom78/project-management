@@ -162,8 +162,6 @@ export default function FormProject () {
     }
   }, [projects])
 
-  console.log({ projectData })
-
   return (
     <Box>
       <Header text={id ? 'Edit project' : 'Add project'} back>
