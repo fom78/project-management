@@ -68,7 +68,7 @@ function CustomTable ({ columns, data }) {
   // Render the UI for your table
   return (
     <>
-      <TableChakra {...getTableProps()}>
+      <TableChakra display={{ md: 'table', base: 'none' }} {...getTableProps()}>
         <Thead bgColor='gray.50' py={4}>
           {headerGroups.map((headerGroup, i) => (
             <Tr key={i} {...headerGroup.getHeaderGroupProps()}>
