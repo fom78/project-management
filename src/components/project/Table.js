@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
 import { useTable, usePagination } from 'react-table'
-import profile from 'assets/images/avatar01.png'
-import profile2 from 'assets/images/avatar02.png'
+
 import {
   Table as TableChakra,
   Thead,
@@ -35,6 +34,7 @@ import {
   // FaAngleUp
 } from 'react-icons/fa'
 import ActionsMenu from './ActionsMenu'
+import { users } from 'data/fakeData'
 
 function CustomTable ({ columns, data }) {
   // Use the state and functions returned from useTable to build your UI
@@ -232,13 +232,13 @@ function Table ({ projects }) {
         ),
         projectManager: (
           <HStack alignItems='center'>
-            <Avatar size='sm' name='profile image' src={profile2} mr={1} />
+            <Avatar size='sm' name='profile image' src={`/assets/images/${users.filter((user) => user.name === p.projectManager)[0].photo}`} mr={1} />
             <Text> {p.projectManager}</Text>
           </HStack>
         ),
         assignedTo: (
           <HStack alignItems='center'>
-            <Avatar size='sm' name='profile image' src={profile} mr={1} />
+            <Avatar size='sm' name='profile image' src={`/assets/images/${users.filter((user) => user.name === p.assignedTo)[0].photo}`} mr={1} />
             <Text>{p.assignedTo}</Text>
           </HStack>
         ),
