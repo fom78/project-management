@@ -1,5 +1,5 @@
 import { Avatar, Box, HStack, Text } from '@chakra-ui/react'
-import profile from 'assets/images/avatar02.png'
+import { users } from 'data/fakeData'
 import ActionsMenu from './ActionsMenu'
 
 export default function Card ({ id, projectName, assignedTo, creationDate }) {
@@ -25,7 +25,7 @@ export default function Card ({ id, projectName, assignedTo, creationDate }) {
               <Avatar
                 size='sm'
                 name='ignacio truffa'
-                src={profile}
+                src={`/assets/images/${users.filter((user) => user.name === assignedTo)[0].photo}`}
                 mr={1}
               />
               <Text fontSize='sm' color='gray.600'>
